@@ -8,7 +8,7 @@ AWS.config.update({
 });
 
 const dynamoClient = new AWS.DynamoDB.DocumentClient();
-const TABLE_NAME = "harrypoter-api";
+const TABLE_NAME = process.env.AWS_DYNAMODB_TABLE;
 
 const getCharacters = async() => {
     const params = {
